@@ -1,5 +1,9 @@
 ## Integrate SolarWinds NPM into OpsMgr
 
+
+### SolarWinds NPM:
+![Solar_NPM](https://raw.githubusercontent.com/Juanito99/SolarWinds_NPM_OpsMgr/master/PicturesForGitWebSite/SolarWinds-NPM.png)
+
 ### Inventory View:
 ![Solar_Inventory](https://raw.githubusercontent.com/Juanito99/SolarWinds_NPM_OpsMgr/master/PicturesForGitWebSite/SolarOpsMgr_InvView.png)
 
