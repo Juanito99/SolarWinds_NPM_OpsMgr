@@ -1,0 +1,95 @@
+<TemplateGroup>
+  <Instances>
+    <Instance ID="Instanceaac2f41d1cd940b795894c063f089c83" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.CoreSwitch</Id>
+        <DisplayName>Core Switch</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.CoreSwitch</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instancef56ced0e79dc4f88b628bb85f8a74b09" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.FireWall</Id>
+        <DisplayName>FireWall</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.FireWall</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instancee3407ad4816b4c1aa5b966d84bab4b3d" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.OtherDevice</Id>
+        <DisplayName>Other Device</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.OtherDevice</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instancec9f10b7fe2ed4d87ae6d7b1acf217b52" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.Router</Id>
+        <DisplayName>Router</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.Router</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instance6d7d38d92f7f403a90744bb076a08b93" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.Switch</Id>
+        <DisplayName>Switch</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.Switch</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instance024d15769c8343108121a19ec205d574" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.StateViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.State.NPM.ArubaController</Id>
+        <DisplayName>Aruba Controller</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.ArubaController</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+    <Instance ID="Instanceb7501b24793f472c80aa9390e2acac49" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.CustomView" Version="1.0.0.0">
+      <CustomViewConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ViewFolder>ABC.Network.SolarWinds.NPM.Folder</ViewFolder>
+        <ViewType>SC!Microsoft.SystemCenter.InventoryViewType</ViewType>
+        <Visible>true</Visible>
+        <Accessibility>Internal</Accessibility>
+        <Id>View.Iventory.NPM.MonitoringServer</Id>
+        <DisplayName>Monitoring Server (Not monitored)</DisplayName>
+        <Description>Description for the new view</Description>
+        <Target>ABC.Network.SolarWinds.NPM.MonitoringServer</Target>
+        <Category>Operations</Category>
+      </CustomViewConfig>
+    </Instance>
+  </Instances>
+</TemplateGroup>

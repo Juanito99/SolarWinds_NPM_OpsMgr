@@ -1,0 +1,214 @@
+<TemplateGroup>
+  <Instances>
+    <Instance ID="Instance1cb8bbbf42bb4bd8ba0ce5a2d4aaa2da" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.FireWall</Id>
+        <DisplayName>Monitor NPM FireWall</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.FireWall</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instance43699765e5664e86bf5089d6215eea58" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.CoreSwitch</Id>
+        <DisplayName>Monitor NPM Core Switch</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.CoreSwitch</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instance73873838452e41a096e36bbd5eb72bc1" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.OtherDevice</Id>
+        <DisplayName>Monitor NPM Other Device</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.OtherDevice</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instanceef1267c838eb417f97f3f4587f871e17" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.Router</Id>
+        <DisplayName>Monitor NPM Router</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.Router</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instancebc3b3eee32224e5bb6979faa81189742" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.Switch</Id>
+        <DisplayName>Monitor NPM Switch</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.Switch</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instance105aa687b2e8408c91f81596ecaf9ac5" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>ABC.Network.SolarWinds.NPM.TestNode.MonitorType</MonitorType>
+        <MonitorConfig>&lt;IntervalSeconds&gt;300&lt;/IntervalSeconds&gt;&lt;SyncTime /&gt;&lt;MonitorItem&gt;router&lt;/MonitorItem&gt;&lt;Key&gt;$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$&lt;/Key&gt;&lt;Threshold&gt;NotInUse&lt;/Threshold&gt;</MonitorConfig>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>Success</OperationalStateId>
+            <OperationalStateDisplayName>Success</OperationalStateDisplayName>
+            <MonitorTypeStateId>Success</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>Failure</OperationalStateId>
+            <OperationalStateDisplayName>Failure</OperationalStateDisplayName>
+            <MonitorTypeStateId>Failure</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Internal</Accessibility>
+        <Id>Monitor.NPM.ArubaController</Id>
+        <DisplayName>Monitor NPM ArubaController</DisplayName>
+        <Description>Description for the new unit monitor.</Description>
+        <Target>ABC.Network.SolarWinds.NPM.ArubaController</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>None</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+  </Instances>
+</TemplateGroup>

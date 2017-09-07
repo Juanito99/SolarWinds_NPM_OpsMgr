@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagementPack SchemaVersion="2.0" ContentReadable="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Manifest>
+    <Identity>
+      <ID>ABC.Network.SolarWinds.NPM</ID>
+      <Version>1.0.0.11</Version>
+    </Identity>
+    <Name>ABC.Network.SolarWinds.NPM</Name>
+    <References>
+      <Reference Alias="SC">
+        <ID>Microsoft.SystemCenter.Library</ID>
+        <Version>7.0.8433.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Windows">
+        <ID>Microsoft.Windows.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Health">
+        <ID>System.Health.Library</ID>
+        <Version>7.0.8433.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Node" Accessibility="Public" Abstract="true" Base="System!System.LogicalEntity" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="NodeID" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NodeCaption" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NodeGroup" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="AgentIP" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="Community" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysName" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysDescr" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysContact" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysLocation" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SystemOID" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="Vendor" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="MachineType" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="LastBoot" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="OSImage" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="OSVersion" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="ConfigTypes" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="LoginStatus" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="City" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Switch" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.CoreSwitch" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.ArubaController" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Router" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.FireWall" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.OtherDevice" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.MonitoringServer" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ComputerRole" Hosted="true" Singleton="false" Extension="false">
+          <Property ID="NPMServerName" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMInformationServiceURL" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMServerPort" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMServerProtocoll" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMRegPath" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+        <ClassType ID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" Accessibility="Public" Abstract="false" Base="System!System.LogicalEntity" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="NPMQryUsr" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMQryPwd" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+      </ClassTypes>
+    </EntityTypes>
+    <ModuleTypes>
+      <DataSourceModuleType ID="ABC.Network.SolarWinds.NPM.TestNode.PropertyBag.Filtered" Accessibility="Internal" Batching="false">
+        <Configuration>
+          <xsd:element name="IntervalSeconds" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="SyncTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="MonitorItem" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Key" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Threshold" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="IntervalSeconds" Selector="$Config/IntervalSeconds$" ParameterType="int" />
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string" />
+          <OverrideableParameter ID="Threshold" Selector="$Config/Threshold$" ParameterType="string" />
+        </OverrideableParameters>
+        <ModuleImplementation Isolation="Any">
+          <Composite>
+            <MemberModules>
+              <DataSource ID="DS" TypeID="ABC.Network.SolarWinds.NPM.TestNode.PropertyBag">
+                <IntervalSeconds>$Config/IntervalSeconds$</IntervalSeconds>
+                <SyncTime>$Config/SyncTime$</SyncTime>
+                <MonitorItem>$Config/MonitorItem$</MonitorItem>
+                <Threshold>$Config/Threshold$</Threshold>
+                <Key>$Config/Key$</Key>
+              </DataSource>
+              <ConditionDetection ID="Filter" TypeID="System!System.ExpressionFilter">
+                <Expression>
+                  <SimpleExpression>
+                    <ValueExpression>
+                      <XPathQuery Type="String">Property[@Name="Key"]</XPathQuery>
+                    </ValueExpression>
+                    <Operator>Equal</Operator>
+                    <ValueExpression>
+                      <Value Type="String">$Config/Key$</Value>
+                    </ValueExpression>
+                  </SimpleExpression>
+                </Expression>
+              </ConditionDetection>
+            </MemberModules>
+            <Composition>
+              <Node ID="Filter">
+                <Node ID="DS" />
+              </Node>
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.PropertyBagData</OutputType>
+      </DataSourceModuleType>
+      <DataSourceModuleType ID="ABC.Network.SolarWinds.NPM.TestNode.PropertyBag" Accessibility="Internal" Batching="false">
+        <Configuration>
+          <xsd:element name="IntervalSeconds" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="SyncTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="MonitorItem" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Threshold" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Key" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="IntervalSeconds" Selector="$Config/IntervalSeconds$" ParameterType="int" />
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string" />
+          <OverrideableParameter ID="Threshold" Selector="$Config/Threshold$" ParameterType="string" />
+        </OverrideableParameters>
+        <ModuleImplementation Isolation="Any">
+          <Composite>
+            <MemberModules>
+              <DataSource ID="Schedule" TypeID="System!System.SimpleScheduler">
+                <IntervalSeconds>$Config/IntervalSeconds$</IntervalSeconds>
+                <SyncTime>$Config/SyncTime$</SyncTime>
+              </DataSource>
+              <ProbeAction ID="Probe" TypeID="ABC.Network.SolarWinds.NPM.TestNode.Probe">
+                <MonitorItem>$Config/MonitorItem$</MonitorItem>
+                <Threshold>$Config/Threshold$</Threshold>
+              </ProbeAction>
+            </MemberModules>
+            <Composition>
+              <Node ID="Probe">
+                <Node ID="Schedule" />
+              </Node>
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.PropertyBagData</OutputType>
+      </DataSourceModuleType>
+      <ProbeActionModuleType ID="ABC.Network.SolarWinds.NPM.TestNode.Probe" Accessibility="Internal" Batching="false" PassThrough="false">
+        <Configuration>
+          <xsd:element name="MonitorItem" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Threshold" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </Configuration>
+        <ModuleImplementation Isolation="Any">
+          <Composite>
+            <MemberModules>
+              <ProbeAction ID="PSScript" TypeID="Windows!Microsoft.Windows.PowerShellPropertyBagProbe">
+                <ScriptName>MonitorNPMNodes.ps1$</ScriptName>
+                <ScriptBody><![CDATA[param($sourceId,$managedEntityId,$MonitorItem,$Threshold)
+
+$api           = New-Object -ComObject 'MOM.ScriptAPI'
+
+$Global:Error.Clear()
+$ErrorActionPreference = 'Continue'
+
+$testedAt = "Tested on: $(Get-Date -Format u) / $(([TimeZoneInfo]::Local).DisplayName)"
+
+#region PREWORK Disabling the certificate validations
+add-type -TypeDefinition @"
+	using System.Net;
+	using System.Security.Cryptography.X509Certificates;
+	public class TrustAllCertsPolicy : ICertificatePolicy {
+		public bool CheckValidationResult(
+			ServicePoint srvPoint, X509Certificate certificate,
+			WebRequest request, int certificateProblem) {
+			return true;
+		}
+	}
+"@
+[Net.ServicePointManager]::CertificatePolicy = New-Object -TypeName TrustAllCertsPolicy
+#endregion PREWORK
+
+$classNPMMonSrv               = Get-SCOMClass -Name 'ABC.Network.SolarWinds.NPM.MonitoringServer'
+$classNPMMonSrvInstances      = Get-SCOMClassInstance -Class $classNPMMonSrv
+
+$classNPMRunTimeInfo          = Get-SCOMClass -Name 'ABC.Network.SolarWinds.NPM.ServerRuntimeInfo'
+$classNPMRunTimeInfoInstances = Get-SCOMClassInstance -Class $classNPMRunTimeInfo
+
+$NPMServerName            = $classNPMMonSrvInstances.'[ABC.Network.SolarWinds.NPM.MonitoringServer].NPMServerName'.Value
+$NPMInformationServiceURL = $classNPMMonSrvInstances.'[ABC.Network.SolarWinds.NPM.MonitoringServer].NPMInformationServiceURL'.Value
+$NPMServerPort            = $classNPMMonSrvInstances.'[ABC.Network.SolarWinds.NPM.MonitoringServer].NPMServerPort'.Value
+$NPMServerProtocoll       = $classNPMMonSrvInstances.'[ABC.Network.SolarWinds.NPM.MonitoringServer].NPMServerProtocoll'.Value
+
+$NPMQryUsr = $classNPMRunTimeInfoInstances.'[ABC.Network.SolarWinds.NPM.ServerRuntimeInfo].NPMQryUsr'.Value
+$NPMQryPwd = $classNPMRunTimeInfoInstances.'[ABC.Network.SolarWinds.NPM.ServerRuntimeInfo].NPMQryPwd'.Value
+
+$pwdTmpRw = $NPMQryPwd -split '-'
+$pwdTmp   = $pwdTmpRw | %{ [System.Text.Encoding]::UTF8.GetString([System.Convert]::ToInt32($_,2)) }
+
+$pwdClear = [string]::Empty
+$pwdTmp   | ForEach-Object { $pwdClear += $_ }
+
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM MonitorNPMNodes.ps1',6000,4,"MonitorNPMNodes Started - Source $($sourceId) managEnt $($managedEntityId) MonitorItem $MonitorItem NPMServer $NPMServerName" )
+
+switch ($MonitorItem) {
+	'router' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE+NodeCaption+LIKE+'%VPN%'+OR+NodeCaption+LIKE+'%GW%'+OR+NodeCaption+LIKE+'%MPLS%'"
+		break
+	}
+	'switch' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE+NodeCaption+LIKE+'%sw%'"
+		break
+	}
+	'coreswitch' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE+NodeCaption+LIKE+'%cs%'"
+		break
+	}
+	'firewall' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE+NodeCaption+LIKE+'%fw%'"
+		break
+	}
+	'arubacontroller' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE+NodeCaption+LIKE+'%aruba%'"
+		break
+	}
+	'otherdevice' {
+		$qrySQL  = "SELECT+NodeID,NodeCaption,AgentIP,Status,SysContact,SysLocation,"
+		$qrySQL += "MachineType,LastBoot,City+FROM+NCM.Nodes+WHERE(NodeCaption+NOT+LIKE+'%SW%'+AND+"
+		$qrySQL += "NodeCaption+NOT+LIKE+'%MPLS%'+AND+NodeCaption+NOT+LIKE+'%cs%'+AND+"
+		$qrySQL += "NodeCaption+NOT+LIKE+'%aruba%'+AND+NodeCaption+NOT+LIKE+'%VPN%'+AND+"
+		$qrySQL += "NodeCaption+NOT+LIKE+'%fw%'"
+		break
+	}
+
+}
+
+$npmSecPwd  = ConvertTo-SecureString $pwdClear -AsPlainText -Force
+$npmCreds   = New-Object System.Management.Automation.PSCredential ($NPMQryUsr, $npmSecPwd)
+
+$npmFullUrl = $NPMServerProtocoll + '://' + $NPMServerName + ':' + $NPMServerPort + '/' + $NPMInformationServiceURL + 'query=' + $qrySQL
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM MonitorNPMNodes.ps1',6001,4,"MonitorNPMNodes Qry URL: $npmFullUrl  with User: $npmQryUsr" )
+
+$npmQryRsp  = Invoke-RestMethod -Method Get -Uri $npmFullUrl -Credential $npmCreds -UseBasicParsing 
+
+$npmQryRsp.results | ForEach-Object {
+
+	$nNodeID      = $_.NodeID
+	$nNodeCaption = $_.NodeCaption	
+	$nAgentIP     = $_.AgentIP
+	$nStatus      = $_.Status	
+	$nSysContact  = $_.SysContact
+	$nSysLocation = $_.SysLocation
+	$nMachineType = $_.MachineType	
+	$nLastBoot    = $_.LastBoot	
+	$nCity        = $_.City
+
+	if ([String]::IsNullOrEmpty($nNodeID))      {continue}
+	if ([String]::IsNullOrEmpty($nNodeCaption)) {$nNodeCaption = '.'}	
+	if ([String]::IsNullOrEmpty($nAgentIP))     {$nAgentIP = '.'}	
+	if ([String]::IsNullOrEmpty($nStatus))      {$nStatus = '.'}	
+	if ([String]::IsNullOrEmpty($nSysContact))  {$nSysContact = '.'}
+	if ([String]::IsNullOrEmpty($nSysLocation)) {$nSysLocation = '.'}
+	if ([String]::IsNullOrEmpty($nMachineType)) {$nMachineType = '.'}
+	if ([String]::IsNullOrEmpty($nLastBoot))    {$nLastBoot = '.'}
+	if ([String]::IsNullOrEmpty($nCity))        {$nCity = '.'}
+	
+	if($nStatus -eq '1') {
+		$state = 'Success'
+	} else {
+		$state = 'Failure'
+	}
+
+	$supplement = " NodeIP: $($nAgentIP)`n Status: $($nStatus)`n Contact: $($nSysContact)`n Location: $($nSysLocation)`n City: $($nCity)`n LastBoot: $($nLastBoot)"
+
+	$bag = $api.CreatePropertybag()					
+	$bag.AddValue("Key",$nNodeID)
+	$bag.AddValue("NodeCaption",$nNodeCaption)		
+	$bag.AddValue("State",$state)				
+	$bag.AddValue("Supplement",$supplement)		
+	$bag.AddValue("TestedAt",$testedAt)			
+	$bag
+
+
+} #END $npmQryRsp.results | ForEach-Object 
+]]></ScriptBody>
+                <Parameters>
+                  <Parameter>
+                    <Name>MonitorItem</Name>
+                    <Value>$Config/MonitorItem$</Value>
+                  </Parameter>
+                  <Parameter>
+                    <Name>Threshold</Name>
+                    <Value>$Config/Threshold$</Value>
+                  </Parameter>
+                </Parameters>
+                <TimeoutSeconds>300</TimeoutSeconds>
+              </ProbeAction>
+            </MemberModules>
+            <Composition>
+              <Node ID="PSScript" />
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.PropertyBagData</OutputType>
+        <InputType>System!System.BaseData</InputType>
+      </ProbeActionModuleType>
+    </ModuleTypes>
+    <MonitorTypes>
+      <UnitMonitorType ID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" Accessibility="Internal">
+        <MonitorTypeStates>
+          <MonitorTypeState ID="Success" NoDetection="false" />
+          <MonitorTypeState ID="Failure" NoDetection="false" />
+        </MonitorTypeStates>
+        <Configuration>
+          <xsd:element name="IntervalSeconds" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="SyncTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="MonitorItem" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Key" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Threshold" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="IntervalSeconds" Selector="$Config/IntervalSeconds$" ParameterType="int" />
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string" />
+          <OverrideableParameter ID="Threshold" Selector="$Config/Threshold$" ParameterType="string" />
+        </OverrideableParameters>
+        <MonitorImplementation>
+          <MemberModules>
+            <DataSource ID="DataSource" TypeID="ABC.Network.SolarWinds.NPM.TestNode.PropertyBag.Filtered">
+              <IntervalSeconds>$Config/IntervalSeconds$</IntervalSeconds>
+              <SyncTime>$Config/SyncTime$</SyncTime>
+              <MonitorItem>$Config/MonitorItem$</MonitorItem>
+              <Key>$Config/Key$</Key>
+              <Threshold>$Config/Threshold$</Threshold>
+            </DataSource>
+            <ProbeAction ID="PassThru" TypeID="System!System.PassThroughProbe" />
+            <ProbeAction ID="Probe" TypeID="ABC.Network.SolarWinds.NPM.TestNode.Probe">
+              <MonitorItem>$Config/MonitorItem$</MonitorItem>
+              <Threshold>$Config/Threshold$</Threshold>
+            </ProbeAction>
+            <ConditionDetection ID="FilterSuccess" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Property[@Name='State']</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Success</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="FilterFailure" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Property[@Name='State']</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Failure</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </ConditionDetection>
+          </MemberModules>
+          <RegularDetections>
+            <RegularDetection MonitorTypeStateID="Success">
+              <Node ID="FilterSuccess">
+                <Node ID="DataSource" />
+              </Node>
+            </RegularDetection>
+            <RegularDetection MonitorTypeStateID="Failure">
+              <Node ID="FilterFailure">
+                <Node ID="DataSource" />
+              </Node>
+            </RegularDetection>
+          </RegularDetections>
+        </MonitorImplementation>
+      </UnitMonitorType>
+    </MonitorTypes>
+  </TypeDefinitions>
+  <Categories>
+    <Category ID="ABC.Network.SolarWinds.NPM.ArubaController.Category" Target="ABC.Network.SolarWinds.NPM.ArubaController.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="ABC.Network.SolarWinds.NPM.CoreSwitch.Category" Target="ABC.Network.SolarWinds.NPM.CoreSwitch.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="ABC.Network.SolarWinds.NPM.Switch.Category" Target="ABC.Network.SolarWinds.NPM.Switch.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="ABC.Network.SolarWinds.NPM.Router.Category" Target="ABC.Network.SolarWinds.NPM.Router.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="ABC.Network.SolarWinds.NPM.FireWall.Category" Target="ABC.Network.SolarWinds.NPM.FireWall.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+    <Category ID="ABC.Network.SolarWinds.NPM.OtherDevice.Category" Target="ABC.Network.SolarWinds.NPM.OtherDevice.Icon" Value="System!System.Internal.ManagementPack.Images.DiagramIcon" />
+  </Categories>
+  <Monitoring>
+    <Discoveries>
+      <Discovery ID="ABC.Network.SolarWinds.NPM.Discover.NPM.MonitoringServer" Target="Windows!Microsoft.Windows.Server.Computer" Enabled="true" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.MonitoringServer" />
+        </DiscoveryTypes>
+        <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.FilteredRegistryDiscoveryProvider">
+          <ComputerName>$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</ComputerName>
+          <RegistryAttributeDefinitions>
+            <RegistryAttributeDefinition>
+              <AttributeName>KeyExists</AttributeName>
+              <Path>SOFTWARE\ABCIT\NPMMonitoringServer</Path>
+              <PathType>0</PathType>
+              <AttributeType>0</AttributeType>
+            </RegistryAttributeDefinition>
+            <RegistryAttributeDefinition>
+              <AttributeName>NPMServerName</AttributeName>
+              <Path>SOFTWARE\ABCIT\NPMMonitoringServer\NPMServerName</Path>
+              <PathType>1</PathType>
+              <AttributeType>1</AttributeType>
+            </RegistryAttributeDefinition>
+            <RegistryAttributeDefinition>
+              <AttributeName>NPMInformationServiceURL</AttributeName>
+              <Path>SOFTWARE\ABCIT\NPMMonitoringServer\NPMInformationServiceURL</Path>
+              <PathType>1</PathType>
+              <AttributeType>1</AttributeType>
+            </RegistryAttributeDefinition>
+            <RegistryAttributeDefinition>
+              <AttributeName>NPMServerPort</AttributeName>
+              <Path>SOFTWARE\ABCIT\NPMMonitoringServer\NPMServerPort</Path>
+              <PathType>1</PathType>
+              <AttributeType>1</AttributeType>
+            </RegistryAttributeDefinition>
+            <RegistryAttributeDefinition>
+              <AttributeName>NPMServerProtocoll</AttributeName>
+              <Path>SOFTWARE\ABCIT\NPMMonitoringServer\NPMServerProtocoll</Path>
+              <PathType>1</PathType>
+              <AttributeType>1</AttributeType>
+            </RegistryAttributeDefinition>
+          </RegistryAttributeDefinitions>
+          <Frequency>86400</Frequency>
+          <ClassId>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]$</ClassId>
+          <InstanceSettings>
+            <Settings>
+              <Setting>
+                <Name>$MPElement[Name="Windows!Microsoft.Windows.Computer"]/PrincipalName$</Name>
+                <Value>$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="System!System.Entity"]/DisplayName$</Name>
+                <Value>$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMServerName$</Name>
+                <Value>$Data/Values/NPMServerName$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMInformationServiceURL$</Name>
+                <Value>$Data/Values/NPMInformationServiceURL$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMServerPort$</Name>
+                <Value>$Data/Values/NPMServerPort$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMServerProtocoll$</Name>
+                <Value>$Data/Values/NPMServerProtocoll$</Value>
+              </Setting>
+              <Setting>
+                <Name>$MPElement[Name="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMRegPath$</Name>
+                <Value>SOFTWARE\ABCIT\NPMMonitoringServer</Value>
+              </Setting>
+            </Settings>
+          </InstanceSettings>
+          <Expression>
+            <SimpleExpression>
+              <ValueExpression>
+                <XPathQuery>Values/KeyExists</XPathQuery>
+              </ValueExpression>
+              <Operator>Equal</Operator>
+              <ValueExpression>
+                <Value>true</Value>
+              </ValueExpression>
+            </SimpleExpression>
+          </Expression>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="ABC.Network.SolarWinds.NPM.Discover.NPM.RuntimeInfo" Target="ABC.Network.SolarWinds.NPM.MonitoringServer" Enabled="true" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" />
+        </DiscoveryTypes>
+        <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.TimedPowerShell.DiscoveryProvider">
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <ScriptName>DiscoverNPMNodes.ps1</ScriptName>
+          <ScriptBody><![CDATA[param($sourceId,$managedEntityId,$NPMRegPath)
+
+$api           = New-Object -ComObject 'MOM.ScriptAPI'
+$discoveryData = $api.CreateDiscoveryData(0, $sourceId, $managedEntityId)
+
+$Global:Error.Clear()
+$ErrorActionPreference = 'Continue'
+
+#region PREWORK Disabling the certificate validations
+add-type -TypeDefinition @"
+	using System.Net;
+	using System.Security.Cryptography.X509Certificates;
+	public class TrustAllCertsPolicy : ICertificatePolicy {
+		public bool CheckValidationResult(
+			ServicePoint srvPoint, X509Certificate certificate,
+			WebRequest request, int certificateProblem) {
+			return true;
+		}
+	}
+"@
+[Net.ServicePointManager]::CertificatePolicy = New-Object -TypeName TrustAllCertsPolicy
+#endregion PREWORK
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM DiscoverNPMNodes.ps1',5000,4,"DiscoverNPMNodes Started - Source $($sourceId) managEnt $($managedEntityId) discoveryItem $discoveryItem registry Key $NPMRegPath " )
+
+$NPMRegPath               = 'HKLM:\' + $NPMRegPath
+$npmServerProtocoll       = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerProtocoll
+$npmServerName            = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerName
+$npmServerPort            = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerPort
+$npmInformationServiceURL = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMInformationServiceURL
+$npmQryUsr                = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMQryUsr
+$npmQryPwd                = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMQryPwd
+
+#region discoverServerRuntimeInfo 
+
+$npmQryPwdHsh   = [System.Text.Encoding]::UTF8.GetBytes($npmQryPwd) | %{ [System.Convert]::ToString($_,2).PadLeft(8,'0') }
+$npmQryPwdHshst = $npmQryPwdHsh -join '-'
+
+$displayName = 'RuntimeInfo-' + $npmServerName			
+$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']$")			
+$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']/NPMQryPwd$",$npmQryPwdHshst)
+$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']/NPMQryUsr$",$npmQryUsr)
+$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+$discoveryData.AddInstance($instance)		
+
+#endregion discoverServerRuntimeInfo
+
+
+# Below discovery of Nodes
+
+$npmSecPwd  = ConvertTo-SecureString $npmQryPwd -AsPlainText -Force
+$npmCreds   = New-Object System.Management.Automation.PSCredential ($npmQryUsr, $npmSecPwd)
+
+$qrySQL     = 'SELECT+NodeID,NodeCaption,NodeGroup,AgentIP,Community,SysName,SysDescr,SysContact,SysLocation,SystemOID,'
+$qrySQL    += 'Vendor,MachineType,LastBoot,OSImage,OSVersion,ConfigTypes,LoginStatus,City+FROM+NCM.Nodes'
+
+$npmFullUrl = $npmServerProtocoll + '://' + $npmServerName + ':' + $npmServerPort + '/' + $npmInformationServiceURL + 'query=' + $qrySQL
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM DiscoverNPMNodes.ps1',5001,4,"DiscoverNPMNodes Qry URL: $npmFullUrl  with User: $npmQryUsr found pwd in $npmQryPwdPath " )
+
+$npmQryRsp  = Invoke-RestMethod -Method Get -Uri $npmFullUrl -Credential $npmCreds -UseBasicParsing 
+
+$npmQryRsp.results | ForEach-Object {
+
+	$nNodeID      = $_.NodeID
+	$nNodeCaption = $_.NodeCaption
+	$nNodeGroup   = $_.NodeGroup
+	$nAgentIP     = $_.AgentIP
+	$nCommunity   = $_.Community
+	$nSysName     = $_.SysName
+	$nSysDescr    = $_.SysDescr
+	$nSysContact  = $_.SysContact
+	$nSysLocation = $_.SysLocation
+	$nSystemOID   = $_.SystemOID
+	$nMachineType = $_.MachineType
+	$nVendor      = $_.Vendor
+	$nLastBoot    = $_.LastBoot
+	$nOsImage     = $_.OSImage
+	$nOsVersion   = $_.OSVersion
+	$nConfigTypes = $_.ConfigTypes
+	$nLoginStatus = $_.LoginStatus
+	$nCity        = $_.City
+
+	if ([String]::IsNullOrEmpty($nNodeID))      {continue}
+	if ([String]::IsNullOrEmpty($nNodeCaption)) {$nNodeCaption = '.'}
+	if ([String]::IsNullOrEmpty($nNodeGroup))   {$nNodeGroup = '.'}
+	if ([String]::IsNullOrEmpty($nAgentIP))     {$nAgentIP = '.'}
+	if ([String]::IsNullOrEmpty($nCommunity))   {$nCommunity = '.'}
+	if ([String]::IsNullOrEmpty($nSysName))     {$nSysName = '.'}
+	if ([String]::IsNullOrEmpty($nSysDescr))    {$nSysDescr = '.'}
+	if ([String]::IsNullOrEmpty($nSysContact))  {$nSysContact = '.'}
+	if ([String]::IsNullOrEmpty($nSysLocation)) {$nSysLocation = '.'}
+	if ([String]::IsNullOrEmpty($nSystemOID))   {$nSystemOID = '.'}
+	if ([String]::IsNullOrEmpty($nMachineType)) {$nMachineType = '.'}
+	if ([String]::IsNullOrEmpty($nVendor))      {$nVendor = '.'}
+	if ([String]::IsNullOrEmpty($nLastBoot))    {$nLastBoot = '.'}
+	if ([String]::IsNullOrEmpty($nOsImage))     {$nOsImage = '.'}
+	if ([String]::IsNullOrEmpty($nOsVersion))   {$nOsVersion = '.'}
+	if ([String]::IsNullOrEmpty($nConfigTypes)) {$nConfigTypes = '.'}
+	if ([String]::IsNullOrEmpty($nLoginStatus)) {$nLoginStatus = '.'}
+	if ([String]::IsNullOrEmpty($nCity))        {$nCity = '.'}
+
+	switch -regex ($nNodeCaption) {
+		'[a-zA-Z-_0-9\.]*VPN|[a-zA-Z-_0-9\.]*GW|[a-zA-Z\-_0-9\.]*MPLS' {
+			$displayName = 'Router-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.Router']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)			
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)		
+			
+		  break
+		}
+		'[a-zA-Z\-_0-9\.]{5,5}sw|SW' {
+		  $displayName = 'Switch-' + $nNodeCaption
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.Switch']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)			
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)		
+		  break
+		}
+		'[a-zA-Z\-_0-9]{5}CS|cs' {
+			$displayName = 'CoreSwitch-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.CoreSwitch']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)		
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		'[a-zA-Z\-_0-9\.]{5,5}fw|FW' {
+			$displayName = 'FireWall-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.FireWall']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)	
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)	
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		'(?i)[a-zA-Z\-_0-9\.]{5,5}ARUBA' {
+			$displayName = 'ArubaController-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.ArubaController']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)	
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)	
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		default {		  
+			$displayName = 'OtherDevice-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.OtherDevice']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)				
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)					
+		}
+	}
+
+} #END $npmQryRsp.results | ForEach-Object 
+
+$discoveryData]]></ScriptBody>
+          <Parameters>
+            <Parameter>
+              <Name>sourceId</Name>
+              <Value>$MPElement$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>managedEntityId</Name>
+              <Value>$Target/Id$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>NPMRegPath</Name>
+              <Value>$Target/Property[Type="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMRegPath$</Value>
+            </Parameter>
+          </Parameters>
+          <TimeoutSeconds>120</TimeoutSeconds>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="ABC.Network.SolarWinds.NPM.Discover.NPM.Devices" Target="ABC.Network.SolarWinds.NPM.MonitoringServer" Enabled="true" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes>
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.ArubaController" />
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.CoreSwitch" />
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.FireWall" />
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.OtherDevice" />
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.Router" />
+          <DiscoveryClass TypeID="ABC.Network.SolarWinds.NPM.Switch" />
+        </DiscoveryTypes>
+        <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.TimedPowerShell.DiscoveryProvider">
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <ScriptName>DiscoverNPMNodes.ps1</ScriptName>
+          <ScriptBody><![CDATA[param($sourceId,$managedEntityId,$NPMRegPath)
+
+$api           = New-Object -ComObject 'MOM.ScriptAPI'
+$discoveryData = $api.CreateDiscoveryData(0, $sourceId, $managedEntityId)
+
+$Global:Error.Clear()
+$ErrorActionPreference = 'Continue'
+
+#region PREWORK Disabling the certificate validations
+add-type -TypeDefinition @"
+	using System.Net;
+	using System.Security.Cryptography.X509Certificates;
+	public class TrustAllCertsPolicy : ICertificatePolicy {
+		public bool CheckValidationResult(
+			ServicePoint srvPoint, X509Certificate certificate,
+			WebRequest request, int certificateProblem) {
+			return true;
+		}
+	}
+"@
+[Net.ServicePointManager]::CertificatePolicy = New-Object -TypeName TrustAllCertsPolicy
+#endregion PREWORK
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM DiscoverNPMNodes.ps1',5000,4,"DiscoverNPMNodes Started - Source $($sourceId) managEnt $($managedEntityId) discoveryItem $discoveryItem registry Key $NPMRegPath " )
+
+$NPMRegPath               = 'HKLM:\' + $NPMRegPath
+$npmServerProtocoll       = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerProtocoll
+$npmServerName            = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerName
+$npmServerPort            = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMServerPort
+$npmInformationServiceURL = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMInformationServiceURL
+$npmQryUsr                = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMQryUsr
+$npmQryPwd                = Get-ItemProperty -Path $NPMRegPath | Select-Object -ExpandProperty NPMQryPwd
+
+#region discoverServerRuntimeInfo 
+
+$npmQryPwdHsh   = [System.Text.Encoding]::UTF8.GetBytes($npmQryPwd) | %{ [System.Convert]::ToString($_,2).PadLeft(8,'0') }
+$npmQryPwdHshst = $npmQryPwdHsh -join '-'
+
+$displayName = 'RuntimeInfo-' + $npmServerName			
+$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']$")			
+$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']/NPMQryPwd$",$npmQryPwdHshst)
+$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.ServerRuntimeInfo']/NPMQryUsr$",$npmQryUsr)
+$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+$discoveryData.AddInstance($instance)		
+
+#endregion discoverServerRuntimeInfo
+
+
+# Below discovery of Nodes
+
+$npmSecPwd  = ConvertTo-SecureString $npmQryPwd -AsPlainText -Force
+$npmCreds   = New-Object System.Management.Automation.PSCredential ($npmQryUsr, $npmSecPwd)
+
+$qrySQL     = 'SELECT+NodeID,NodeCaption,NodeGroup,AgentIP,Community,SysName,SysDescr,SysContact,SysLocation,SystemOID,'
+$qrySQL    += 'Vendor,MachineType,LastBoot,OSImage,OSVersion,ConfigTypes,LoginStatus,City+FROM+NCM.Nodes'
+
+$npmFullUrl = $npmServerProtocoll + '://' + $npmServerName + ':' + $npmServerPort + '/' + $npmInformationServiceURL + 'query=' + $qrySQL
+
+$api.LogScriptEvent('ABC.Network.SolarWindws.NPM DiscoverNPMNodes.ps1',5001,4,"DiscoverNPMNodes Qry URL: $npmFullUrl  with User: $npmQryUsr found pwd in $npmQryPwdPath " )
+
+$npmQryRsp  = Invoke-RestMethod -Method Get -Uri $npmFullUrl -Credential $npmCreds -UseBasicParsing 
+
+$npmQryRsp.results | ForEach-Object {
+
+	$nNodeID      = $_.NodeID
+	$nNodeCaption = $_.NodeCaption
+	$nNodeGroup   = $_.NodeGroup
+	$nAgentIP     = $_.AgentIP
+	$nCommunity   = $_.Community
+	$nSysName     = $_.SysName
+	$nSysDescr    = $_.SysDescr
+	$nSysContact  = $_.SysContact
+	$nSysLocation = $_.SysLocation
+	$nSystemOID   = $_.SystemOID
+	$nMachineType = $_.MachineType
+	$nVendor      = $_.Vendor
+	$nLastBoot    = $_.LastBoot
+	$nOsImage     = $_.OSImage
+	$nOsVersion   = $_.OSVersion
+	$nConfigTypes = $_.ConfigTypes
+	$nLoginStatus = $_.LoginStatus
+	$nCity        = $_.City
+
+	if ([String]::IsNullOrEmpty($nNodeID))      {continue}
+	if ([String]::IsNullOrEmpty($nNodeCaption)) {$nNodeCaption = '.'}
+	if ([String]::IsNullOrEmpty($nNodeGroup))   {$nNodeGroup = '.'}
+	if ([String]::IsNullOrEmpty($nAgentIP))     {$nAgentIP = '.'}
+	if ([String]::IsNullOrEmpty($nCommunity))   {$nCommunity = '.'}
+	if ([String]::IsNullOrEmpty($nSysName))     {$nSysName = '.'}
+	if ([String]::IsNullOrEmpty($nSysDescr))    {$nSysDescr = '.'}
+	if ([String]::IsNullOrEmpty($nSysContact))  {$nSysContact = '.'}
+	if ([String]::IsNullOrEmpty($nSysLocation)) {$nSysLocation = '.'}
+	if ([String]::IsNullOrEmpty($nSystemOID))   {$nSystemOID = '.'}
+	if ([String]::IsNullOrEmpty($nMachineType)) {$nMachineType = '.'}
+	if ([String]::IsNullOrEmpty($nVendor))      {$nVendor = '.'}
+	if ([String]::IsNullOrEmpty($nLastBoot))    {$nLastBoot = '.'}
+	if ([String]::IsNullOrEmpty($nOsImage))     {$nOsImage = '.'}
+	if ([String]::IsNullOrEmpty($nOsVersion))   {$nOsVersion = '.'}
+	if ([String]::IsNullOrEmpty($nConfigTypes)) {$nConfigTypes = '.'}
+	if ([String]::IsNullOrEmpty($nLoginStatus)) {$nLoginStatus = '.'}
+	if ([String]::IsNullOrEmpty($nCity))        {$nCity = '.'}
+
+	switch -regex ($nNodeCaption) {
+		'[a-zA-Z-_0-9\.]*VPN|[a-zA-Z-_0-9\.]*GW|[a-zA-Z\-_0-9\.]*MPLS' {
+			$displayName = 'Router-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.Router']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)			
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)		
+			
+		  break
+		}
+		'[a-zA-Z\-_0-9\.]{5,5}sw|SW' {
+		  $displayName = 'Switch-' + $nNodeCaption
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.Switch']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)			
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)		
+		  break
+		}
+		'[a-zA-Z\-_0-9]{5}CS|cs' {
+			$displayName = 'CoreSwitch-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.CoreSwitch']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)		
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		'[a-zA-Z\-_0-9\.]{5,5}fw|FW' {
+			$displayName = 'FireWall-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.FireWall']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)	
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)	
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		'(?i)[a-zA-Z\-_0-9\.]{5,5}ARUBA' {
+			$displayName = 'ArubaController-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.ArubaController']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)	
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)	
+			$discoveryData.AddInstance($instance)					
+		  break
+		}
+		default {		  
+			$displayName = 'OtherDevice-' + $nNodeCaption			
+			$instance = $discoveryData.CreateClassInstance("$MPElement[Name='ABC.Network.SolarWinds.NPM.OtherDevice']$")			
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeID$",$nNodeID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeCaption$",$nNodeCaption)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/NodeGroup$",$nNodeGroup)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/AgentIP$",$nAgentIP)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Community$",$nCommunity)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysName$",$nSysName)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysDescr$",$nSysDescr)	
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysContact$",$nSysContact)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SysLocation$",$nSysLocation)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/SystemOID$",$nSystemOID)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/Vendor$",$nVendor)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/MachineType$",$nMachineType)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LastBoot$",$nLastBoot)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSImage$",$nOsImage)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/OSVersion$",$nOsVersion)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/ConfigTypes$",$nConfigTypes)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/LoginStatus$",$nLoginStatus)
+			$instance.AddProperty("$MPElement[Name='ABC.Network.SolarWinds.NPM.Node']/City$",$nCity)				
+			$instance.AddProperty("$MPElement[Name='System!System.Entity']/DisplayName$", $displayName)
+			$discoveryData.AddInstance($instance)					
+		}
+	}
+
+} #END $npmQryRsp.results | ForEach-Object 
+
+$discoveryData]]></ScriptBody>
+          <Parameters>
+            <Parameter>
+              <Name>sourceId</Name>
+              <Value>$MPElement$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>managedEntityId</Name>
+              <Value>$Target/Id$</Value>
+            </Parameter>
+            <Parameter>
+              <Name>npmRegPath</Name>
+              <Value>$Target/Property[Type="ABC.Network.SolarWinds.NPM.MonitoringServer"]/NPMRegPath$</Value>
+            </Parameter>
+          </Parameters>
+          <TimeoutSeconds>120</TimeoutSeconds>
+        </DataSource>
+      </Discovery>
+    </Discoveries>
+    <Monitors>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.FireWall" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.CoreSwitch" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.OtherDevice" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Router" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.Router" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.Switch" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+      <UnitMonitor ID="ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController" Accessibility="Internal" Enabled="true" Target="ABC.Network.SolarWinds.NPM.ArubaController" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="ABC.Network.SolarWinds.NPM.TestNode.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <OperationalStates>
+          <OperationalState ID="Success" MonitorTypeStateID="Success" HealthState="Success" />
+          <OperationalState ID="Failure" MonitorTypeStateID="Failure" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <IntervalSeconds>300</IntervalSeconds>
+          <SyncTime />
+          <MonitorItem>router</MonitorItem>
+          <Key>$Target/Property[Type="ABC.Network.SolarWinds.NPM.Node"]/NodeID$</Key>
+          <Threshold>NotInUse</Threshold>
+        </Configuration>
+      </UnitMonitor>
+    </Monitors>
+  </Monitoring>
+  <Presentation>
+    <Views>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.CoreSwitch" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.FireWall" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.OtherDevice" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.Router" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.Router" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.Switch" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.Switch" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.ArubaController" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer" Accessibility="Internal" Target="ABC.Network.SolarWinds.NPM.MonitoringServer" TypeID="SC!Microsoft.SystemCenter.InventoryViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+    </Views>
+    <Folders>
+      <Folder ID="ABC.Network.SolarWinds.NPM.Folder" Accessibility="Internal" ParentFolder="SC!Microsoft.SystemCenter.Monitoring.ViewFolder.Root" />
+    </Folders>
+    <FolderItems>
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.Router" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.Router.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.Switch" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.Switch.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController.FolderItem" />
+      <FolderItem ElementID="ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer" Folder="ABC.Network.SolarWinds.NPM.Folder" ID="ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer.FolderItem" />
+    </FolderItems>
+    <ImageReferences>
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.ArubaController" ImageID="ABC.Network.SolarWinds.NPM.ArubaController.Icon" />
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.CoreSwitch" ImageID="ABC.Network.SolarWinds.NPM.CoreSwitch.Icon" />
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.Switch" ImageID="ABC.Network.SolarWinds.NPM.Switch.Icon" />
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.Router" ImageID="ABC.Network.SolarWinds.NPM.Router.Icon" />
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.FireWall" ImageID="ABC.Network.SolarWinds.NPM.FireWall.Icon" />
+      <ImageReference ElementID="ABC.Network.SolarWinds.NPM.OtherDevice" ImageID="ABC.Network.SolarWinds.NPM.OtherDevice.Icon" />
+    </ImageReferences>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall">
+          <Name>Monitor NPM FireWall</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch">
+          <Name>Monitor NPM Core Switch</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice">
+          <Name>Monitor NPM Other Device</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Router">
+          <Name>Monitor NPM Router</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Router" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Router" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch">
+          <Name>Monitor NPM Switch</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController">
+          <Name>Monitor NPM ArubaController</Name>
+          <Description>Description for the new unit monitor.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController" SubElementID="Success">
+          <Name>Success</Name>
+          <Description>Success</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController" SubElementID="Failure">
+          <Name>Failure</Name>
+          <Description>Failure</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Folder">
+          <Name>ABC Network SolarWinds NPM</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch">
+          <Name>Core Switch</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall">
+          <Name>FireWall</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice">
+          <Name>Other Device</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.Router">
+          <Name>Router</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.Switch">
+          <Name>Switch</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController">
+          <Name>Aruba Controller</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer">
+          <Name>Monitoring Server (Not monitored)</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM">
+          <Name>ABC Network SolarWinds NPM </Name>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node">
+          <Name>Node</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="AgentIP">
+          <Name>AgentIP</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="City">
+          <Name>City</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="Community">
+          <Name>Community</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="ConfigTypes">
+          <Name>ConfigTypes</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="LastBoot">
+          <Name>LastBoot</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="LoginStatus">
+          <Name>LoginStatus</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="MachineType">
+          <Name>MachineType</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeCaption">
+          <Name>NodeCaption</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeGroup">
+          <Name>NodeGroup</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeID">
+          <Name>NodeID</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="OSImage">
+          <Name>OSImage</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="OSVersion">
+          <Name>OSVersion</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysContact">
+          <Name>SysContact</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysDescr">
+          <Name>SysDescr</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysLocation">
+          <Name>SysLocation</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysName">
+          <Name>SysName</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SystemOID">
+          <Name>SystemOID</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="Vendor">
+          <Name>Vendor</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.FireWall">
+          <Name>FireWall</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Router">
+          <Name>Router</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Switch">
+          <Name>Switch</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.CoreSwitch">
+          <Name>CoreSwitch</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.OtherDevice">
+          <Name>OtherDevice</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ArubaController">
+          <Name>ArubaController</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer">
+          <Name>MonitoringServer</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerName">
+          <Name>NPMServerName</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMInformationServiceURL">
+          <Name>NPMInformationServiceURL</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerPort">
+          <Name>NPMServerPort</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerProtocoll">
+          <Name>NPMServerProtocoll</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMRegPath">
+          <Name>NPMRegPath</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo">
+          <Name>ServerRuntimeInfo</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" SubElementID="NPMQryPwd">
+          <Name>NPMQryPwd</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" SubElementID="NPMQryUsr">
+          <Name>NPMQryUsr</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Discover.NPM.MonitoringServer">
+          <Name>Discover NPM Monitoring Server</Name>
+          <Description>Description for the new discovery.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Discover.NPM.RuntimeInfo">
+          <Name>Discover.NPM.RuntimeInfo</Name>
+          <Description>Description for the new discovery.</Description>
+        </DisplayString>
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Discover.NPM.Devices">
+          <Name>Discover.NPM.Devices</Name>
+          <Description>Description for the new discovery.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles></KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+  <Resources>
+    <Image ID="ABC.Network.SolarWinds.NPM.ArubaController.Icon" FileName="NetworkSolarWindsAurba.png" Accessibility="Public" HasNullStream="false" Comment="Aruba Controller" />
+    <Image ID="ABC.Network.SolarWinds.NPM.CoreSwitch.Icon" FileName="NetworkSolarWindsCoreSwitch.png" Accessibility="Public" HasNullStream="false" Comment="Core Switch" />
+    <Image ID="ABC.Network.SolarWinds.NPM.Switch.Icon" FileName="NetworkSolarWindsSwitch.png" Accessibility="Public" HasNullStream="false" Comment="Switch" />
+    <Image ID="ABC.Network.SolarWinds.NPM.Router.Icon" FileName="NetworkSolarWindsRouter.png" Accessibility="Public" HasNullStream="false" Comment="Router" />
+    <Image ID="ABC.Network.SolarWinds.NPM.FireWall.Icon" FileName="NetworkSolarWindsFireWall.png" Accessibility="Public" HasNullStream="false" Comment="FireWall" />
+    <Image ID="ABC.Network.SolarWinds.NPM.OtherDevice.Icon" FileName="NetworkSolarWindsOtherDevice.png" Accessibility="Public" HasNullStream="false" Comment="Other Device" />
+  </Resources>
+</ManagementPack>

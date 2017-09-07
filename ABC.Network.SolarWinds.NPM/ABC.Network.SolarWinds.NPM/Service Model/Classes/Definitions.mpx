@@ -1,0 +1,229 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Node" Accessibility="Public" Abstract="true" Base="System!System.LogicalEntity" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="NodeID" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NodeCaption" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NodeGroup" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="AgentIP" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="Community" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysName" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysDescr" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysContact" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SysLocation" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="SystemOID" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="Vendor" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="MachineType" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="LastBoot" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="OSImage" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="OSVersion" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="ConfigTypes" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="LoginStatus" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="City" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Switch" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.CoreSwitch" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.ArubaController" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.Router" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.FireWall" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+        <ClassType ID="ABC.Network.SolarWinds.NPM.OtherDevice" Accessibility="Public" Abstract="false" Base="ABC.Network.SolarWinds.NPM.Node" Hosted="false" Singleton="false" Extension="false" />
+
+        <ClassType ID="ABC.Network.SolarWinds.NPM.MonitoringServer" Accessibility="Public" Abstract="false"  Base="Windows!Microsoft.Windows.ComputerRole" Hosted="true" Singleton="false" Extension="false">
+          <Property ID="NPMServerName" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMInformationServiceURL" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMServerPort" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMServerProtocoll" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMRegPath" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+
+        <ClassType ID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" Accessibility="Public" Abstract="false"  Base="System!System.LogicalEntity" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="NPMQryUsr" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="NPMQryPwd" Type="string" AutoIncrement="false" Key="false" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+
+      </ClassTypes>
+    </EntityTypes>
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node">
+          <Name>Node</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="AgentIP">
+          <Name>AgentIP</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="City">
+          <Name>City</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="Community">
+          <Name>Community</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="ConfigTypes">
+          <Name>ConfigTypes</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="LastBoot">
+          <Name>LastBoot</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="LoginStatus">
+          <Name>LoginStatus</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="MachineType">
+          <Name>MachineType</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeCaption">
+          <Name>NodeCaption</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeGroup">
+          <Name>NodeGroup</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="NodeID">
+          <Name>NodeID</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="OSImage">
+          <Name>OSImage</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="OSVersion">
+          <Name>OSVersion</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysContact">
+          <Name>SysContact</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysDescr">
+          <Name>SysDescr</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysLocation">
+          <Name>SysLocation</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SysName">
+          <Name>SysName</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="SystemOID">
+          <Name>SystemOID</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Node" SubElementID="Vendor">
+          <Name>Vendor</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.FireWall">
+          <Name>FireWall</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Router">
+          <Name>Router</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.Switch">
+          <Name>Switch</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.CoreSwitch">
+          <Name>CoreSwitch</Name>
+          <Description></Description>
+        </DisplayString>
+
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.OtherDevice">
+          <Name>OtherDevice</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ArubaController">
+          <Name>ArubaController</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer">
+          <Name>MonitoringServer</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerName">
+          <Name>NPMServerName</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMInformationServiceURL">
+          <Name>NPMInformationServiceURL</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerPort">
+          <Name>NPMServerPort</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMServerProtocoll">
+          <Name>NPMServerProtocoll</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.MonitoringServer" SubElementID="NPMRegPath">
+          <Name>NPMRegPath</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo">
+          <Name>ServerRuntimeInfo</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" SubElementID="NPMQryPwd">
+          <Name>NPMQryPwd</Name>
+          <Description></Description>
+        </DisplayString>
+
+        <DisplayString ElementID="ABC.Network.SolarWinds.NPM.ServerRuntimeInfo" SubElementID="NPMQryUsr">
+          <Name>NPMQryUsr</Name>
+          <Description></Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>
