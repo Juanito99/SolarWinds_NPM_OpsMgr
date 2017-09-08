@@ -16,7 +16,7 @@
 
 
 ### More information on:
-Url: Coming soon.
+Url: http://www.rjz.de/SolarWindsNPMToOpsMgr
 
 
 
