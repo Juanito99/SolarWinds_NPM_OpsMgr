@@ -15,7 +15,7 @@ Integrate your Network health state into SCOM relying on SolarWinds Network Moni
 
 
 ### More information on:
-[Documentaiton](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/blob/master/Documentation/Integrate_SolarWinds_NPM_into_OpsMgr.pdf)
+[Documentation](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/blob/master/Documentation/Integrate_SolarWinds_NPM_into_OpsMgr.pdf)
 
 
 ### Downloads:
