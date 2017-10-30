@@ -1,5 +1,5 @@
 ## Integrate SolarWinds NPM into OpsMgr
-
+Integrate your Network health state into SCOM relying on SolarWinds Network Monitoring solution.
 
 ### SolarWinds NPM:
 ![Solar_NPM](https://raw.githubusercontent.com/Juanito99/SolarWinds_NPM_OpsMgr/master/PicturesForGitWebSite/SolarWinds-NPM.png)
@@ -14,9 +14,8 @@
 ![Solar_Diagram](https://raw.githubusercontent.com/Juanito99/SolarWinds_NPM_OpsMgr/master/PicturesForGitWebSite/SolarOpsMgr_DiagramView.png)
 
 
-
 ### More information on:
-Url: http://www.rjz.de/SolarWindsNPMToOpsMgr
+Url: (https://raw.githubusercontent.com/Juanito99/SolarWinds_NPM_OpsMgr/master/Documentation/Integrate_SolarWinds_NPM_into_OpsMgr.pdf)
 
 
 
