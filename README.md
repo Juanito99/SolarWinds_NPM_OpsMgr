@@ -19,7 +19,11 @@ Integrate your Network health state into SCOM relying on SolarWinds Network Moni
 
 
 ### Downloads:
-[ManagementPack](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/blob/master/ABC.Network.SolarWinds.NPM/ABC.Network.SolarWinds.NPM/bin/Debug/ABC.Network.SolarWinds.NPM.mpb) 
+
+[ManagementPack-Sealed](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/blob/master/ABC.Network.SolarWinds.NPM/ABC.Network.SolarWinds.NPM/bin/Debug/ABC.Network.SolarWinds.NPM.mpb) 
+
+[ManagementPack-UnSealed](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/blob/master/ABC.Network.SolarWinds.NPM/ABC.Network.SolarWinds.NPM/bin/release/ABC.Network.SolarWinds.NPM.mpb) 
+
 [Source for VSAE 2015](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/tree/master/ABC.Network.SolarWinds.NPM)
 
 
