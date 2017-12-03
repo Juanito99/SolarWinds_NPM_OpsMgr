@@ -1,0 +1,119 @@
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*6*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Switch*27*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.CoreSwitch*28*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ArubaController*29*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Router*30*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.FireWall*31*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.OtherDevice*32*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*34*10*ClassType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ServerRuntimeInfo*42*10*ClassType
+Health Model\Modules.mpx*ABC.Network.SolarWinds.NPM.TestNode.PropertyBag.Filtered*6*8*DataSourceModuleType
+Health Model\Modules.mpx*ABC.Network.SolarWinds.NPM.TestNode.PropertyBag*54*8*DataSourceModuleType
+Health Model\Modules.mpx*ABC.Network.SolarWinds.NPM.TestNode.Probe*90*8*ProbeActionModuleType
+Health Model\Modules.mpx*ABC.Network.SolarWinds.NPM.TestNode.MonitorType*127*8*UnitMonitorType
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.ArubaController.Category*3*6*Category
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.CoreSwitch.Category*4*6*Category
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Switch.Category*5*6*Category
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Router.Category*6*6*Category
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.FireWall.Category*7*6*Category
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.OtherDevice.Category*8*6*Category
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.MonitoringServer*6*8*Discovery
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.RuntimeInfo*92*8*Discovery
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.Devices*119*8*Discovery
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall*6*8*UnitMonitor
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch*20*8*UnitMonitor
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice*34*8*UnitMonitor
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Router*48*8*UnitMonitor
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch*62*8*UnitMonitor
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController*76*8*UnitMonitor
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch*6*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall*9*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice*12*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Router*15*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Switch*18*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController*21*8*View
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer*24*8*View
+Presentation\Folders.mpx*ABC.Network.SolarWinds.NPM.Folder*5*8*Folder
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch.FolderItem*29*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall.FolderItem*30*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice.FolderItem*31*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Router.FolderItem*32*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Switch.FolderItem*33*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController.FolderItem*34*8*FolderItem
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer.FolderItem*35*8*FolderItem
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.ArubaController*12*8*ImageReference
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.CoreSwitch*13*8*ImageReference
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Switch*14*8*ImageReference
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Router*15*8*ImageReference
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.FireWall*16*8*ImageReference
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.OtherDevice*17*8*ImageReference
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall*95*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall*99*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.FireWall*103*10*DisplayString*SubElementID*Failure
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch*107*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch*111*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.CoreSwitch*115*10*DisplayString*SubElementID*Failure
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice*119*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice*123*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.OtherDevice*127*10*DisplayString*SubElementID*Failure
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Router*131*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Router*135*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Router*139*10*DisplayString*SubElementID*Failure
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch*143*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch*147*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.Switch*151*10*DisplayString*SubElementID*Failure
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController*155*10*DisplayString
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController*159*10*DisplayString*SubElementID*Success
+Health Model\Monitors.mptg.mpx*ABC.Network.SolarWinds.NPM.Monitor.NPM.ArubaController*163*10*DisplayString*SubElementID*Failure
+Presentation\Folders.mpx*ABC.Network.SolarWinds.NPM.Folder*15*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.CoreSwitch*41*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.FireWall*45*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.OtherDevice*49*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Router*53*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.Switch*57*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.State.NPM.ArubaController*61*10*DisplayString
+Presentation\Views.mptg.mpx*ABC.Network.SolarWinds.NPM.View.Iventory.NPM.MonitoringServer*65*10*DisplayString
+Project.mpx*ABC.Network.SolarWinds.NPM*5*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*54*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*59*10*DisplayString*SubElementID*AgentIP
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*64*10*DisplayString*SubElementID*City
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*69*10*DisplayString*SubElementID*Community
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*74*10*DisplayString*SubElementID*ConfigTypes
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*79*10*DisplayString*SubElementID*LastBoot
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*84*10*DisplayString*SubElementID*LoginStatus
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*89*10*DisplayString*SubElementID*MachineType
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*94*10*DisplayString*SubElementID*NodeCaption
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*99*10*DisplayString*SubElementID*NodeGroup
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*104*10*DisplayString*SubElementID*NodeID
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*109*10*DisplayString*SubElementID*OSImage
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*114*10*DisplayString*SubElementID*OSVersion
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*119*10*DisplayString*SubElementID*SysContact
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*124*10*DisplayString*SubElementID*SysDescr
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*129*10*DisplayString*SubElementID*SysLocation
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*134*10*DisplayString*SubElementID*SysName
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*139*10*DisplayString*SubElementID*SystemOID
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Node*144*10*DisplayString*SubElementID*Vendor
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.FireWall*149*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Router*154*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.Switch*159*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.CoreSwitch*164*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.OtherDevice*170*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ArubaController*175*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*180*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*185*10*DisplayString*SubElementID*NPMServerName
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*190*10*DisplayString*SubElementID*NPMInformationServiceURL
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*195*10*DisplayString*SubElementID*NPMServerPort
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*200*10*DisplayString*SubElementID*NPMServerProtocoll
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.MonitoringServer*205*10*DisplayString*SubElementID*NPMRegPath
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ServerRuntimeInfo*210*10*DisplayString
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ServerRuntimeInfo*215*10*DisplayString*SubElementID*NPMQryPwd
+Service Model\Classes\Definitions.mpx*ABC.Network.SolarWinds.NPM.ServerRuntimeInfo*220*10*DisplayString*SubElementID*NPMQryUsr
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.MonitoringServer*156*10*DisplayString
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.RuntimeInfo*160*10*DisplayString
+Service Model\Discoveries\Discoveries.mptg.mpx*ABC.Network.SolarWinds.NPM.Discover.NPM.Devices*164*10*DisplayString
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.ArubaController.Icon*21*6*Image
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.CoreSwitch.Icon*22*6*Image
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Switch.Icon*23*6*Image
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.Router.Icon*24*6*Image
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.FireWall.Icon*25*6*Image
+Presentation\Icons.mpx*ABC.Network.SolarWinds.NPM.OtherDevice.Icon*26*6*Image
