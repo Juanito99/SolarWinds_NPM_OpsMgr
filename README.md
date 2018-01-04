@@ -27,6 +27,16 @@ Integrate your Network health state into SCOM relying on SolarWinds Network Moni
 [Source for VSAE 2015](https://github.com/Juanito99/SolarWinds_NPM_OpsMgr/tree/master/ABC.Network.SolarWinds.NPM)
 
 
+
+
+
+### Community Management Pack:
+Keep this and many other management packs automatically up to date by installing the [Community Management Pack](https://squaredup.com/landing-pages/the-scom-community-mp-catalog)
+
+
+
+
+
 ### License Terms
 
 Integrate SolarWinds NPM into OpsMgr
